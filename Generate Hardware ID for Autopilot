@@ -1,3 +1,5 @@
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+
 New-Item -Type Directory -Path "$env:userprofile\Desktop\HWID"
 Set-Location -Path "$env:userprofile\Desktop\HWID"
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Unrestricted
