@@ -6,4 +6,4 @@ To remove software
 msiexec /x {IdentifyingNumber} /q
 
 wmic product where name ="<PROGRAM NAME HERE>" call uninstall /nointeractive
-wmic product where "name like '<PROGRAM NAME HERE>%%'" call uninstall
+wmic product where "name like '<PROGRAM NAME HERE>%%'" call uninstall /nointeractive
