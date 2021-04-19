@@ -1,4 +1,9 @@
 get-wmiobject Win32_Product | Sort-Object -Property Name | Format-Table IdentifyingNumber, Name, Version, LocalPackage -AutoSize
 
+wmic product get name
+
 To remove software
 msiexec /x {IdentifyingNumber} /q
+
+wmic product where name ="<PROGRAM NAME HERE>" call uninstall /nointeractive
+wmic product where "name like '<PROGRAM NAME HERE>%%'" call uninstall
